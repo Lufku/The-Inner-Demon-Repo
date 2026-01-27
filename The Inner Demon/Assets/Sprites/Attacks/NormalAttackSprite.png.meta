@@ -1,0 +1,253 @@
+fileFormatVersion: 2
+guid: 35bc62dfb50831d46b2620913745d00b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 707847824367187663
+    second: NormalAttackSprite_0
+  - first:
+      213: -7265836162907061053
+    second: NormalAttackSprite_1
+  - first:
+      213: -8005859547303526793
+    second: NormalAttackSprite_2
+  - first:
+      213: 366692909017070895
+    second: NormalAttackSprite_3
+  - first:
+      213: 1549924772989449600
+    second: NormalAttackSprite_4
+  - first:
+      213: 7143141674956276797
+    second: NormalAttackSprite_5
+  - first:
+      213: 4692285271163562608
+    second: NormalAttackSprite_6
+  - first:
+      213: -2455984066877990102
+    second: NormalAttackSprite_7
+  - first:
+      213: -3684008433257207815
+    second: NormalAttackSprite_8
+  - first:
+      213: -6082140439384158039
+    second: NormalAttackSprite_9
+  - first:
+      213: -1525562733867136751
+    second: NormalAttackSprite_10
+  - first:
+      213: 2345031089263199398
+    second: NormalAttackSprite_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NormalAttackSprite_0
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 553
+        width: 120
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc6707e88d7c2d900800000000000000
+      internalID: 707847824367187663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NormalAttackSprite_2
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 558
+        width: 121
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77ebd49982975e090800000000000000
+      internalID: -8005859547303526793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NormalAttackSprite_4
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 555
+        width: 120
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0853d928e50728510800000000000000
+      internalID: 1549924772989449600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NormalAttackSprite_7
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 557
+        width: 121
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2bd7b7e0879aedd0800000000000000
+      internalID: -2455984066877990102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 55be74e72fb282044b0a561db9b00cc8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      NormalAttackSprite_0: 707847824367187663
+      NormalAttackSprite_1: -7265836162907061053
+      NormalAttackSprite_10: -1525562733867136751
+      NormalAttackSprite_11: 2345031089263199398
+      NormalAttackSprite_2: -8005859547303526793
+      NormalAttackSprite_3: 366692909017070895
+      NormalAttackSprite_4: 1549924772989449600
+      NormalAttackSprite_5: 7143141674956276797
+      NormalAttackSprite_6: 4692285271163562608
+      NormalAttackSprite_7: -2455984066877990102
+      NormalAttackSprite_8: -3684008433257207815
+      NormalAttackSprite_9: -6082140439384158039
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
