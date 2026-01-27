@@ -1,0 +1,337 @@
+fileFormatVersion: 2
+guid: d1defd1eec9e99a42aeef78148af7dcd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2242883166686571210
+    second: BombBoom_0
+  - first:
+      213: 7561735108747814038
+    second: BombBoom_1
+  - first:
+      213: 3343062893406604663
+    second: BombBoom_2
+  - first:
+      213: -7737551261997771124
+    second: BombBoom_3
+  - first:
+      213: -4026714085382625376
+    second: BombBoom_4
+  - first:
+      213: 4907381434138007491
+    second: BombBoom_5
+  - first:
+      213: -1538309408779345272
+    second: BombBoom_6
+  - first:
+      213: -756147742939368648
+    second: BombBoom_7
+  - first:
+      213: 6333784894590054864
+    second: BombBoom_8
+  - first:
+      213: 7676932168729223617
+    second: BombBoom_9
+  - first:
+      213: -5320760754699487097
+    second: BombBoom_10
+  - first:
+      213: 6436940448752993861
+    second: BombBoom_11
+  - first:
+      213: 5025444330445454671
+    second: BombBoom_12
+  - first:
+      213: 6460792568983428131
+    second: BombBoom_13
+  - first:
+      213: 2309013414700348554
+    second: BombBoom_14
+  - first:
+      213: 7362480786406633254
+    second: BombBoom_15
+  - first:
+      213: -6975608334514069611
+    second: BombBoom_16
+  - first:
+      213: 8146113815754526246
+    second: BombBoom_17
+  - first:
+      213: -7472385485555223831
+    second: BombBoom_18
+  - first:
+      213: 9190297905549320006
+    second: BombBoom_19
+  - first:
+      213: -4731179576010369593
+    second: BombBoom_20
+  - first:
+      213: 3828686991582669881
+    second: BombBoom_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BombBoom_0
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 636
+        width: 219
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63591f8a4adafd0e0800000000000000
+      internalID: -2242883166686571210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BombBoom_5
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 649
+        width: 117
+        height: 163
+      alignment: 9
+      pivot: {x: 0.4813963, y: 0.47329244}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c79427f9658a1440800000000000000
+      internalID: 4907381434138007491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BombBoom_6
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 627
+        width: 217
+        height: 206
+      alignment: 9
+      pivot: {x: 0.48996943, y: 0.4999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 882e0173eb3d6aae0800000000000000
+      internalID: -1538309408779345272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BombBoom_7
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 680
+        width: 206
+        height: 171
+      alignment: 9
+      pivot: {x: 0.4894344, y: 0.49999964}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833b26052af9185f0800000000000000
+      internalID: -756147742939368648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BombBoom_11
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 690
+        width: 174
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5460448db3b945950800000000000000
+      internalID: 6436940448752993861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BombBoom_14
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 679
+        width: 110
+        height: 108
+      alignment: 9
+      pivot: {x: 0.4406375, y: 0.45969138}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8473dc87734b0020800000000000000
+      internalID: 2309013414700348554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: afc160b44129f4f4da7403f850c42d71
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BombBoom_0: -2242883166686571210
+      BombBoom_1: 7561735108747814038
+      BombBoom_10: -5320760754699487097
+      BombBoom_11: 6436940448752993861
+      BombBoom_12: 5025444330445454671
+      BombBoom_13: 6460792568983428131
+      BombBoom_14: 2309013414700348554
+      BombBoom_15: 7362480786406633254
+      BombBoom_16: -6975608334514069611
+      BombBoom_17: 8146113815754526246
+      BombBoom_18: -7472385485555223831
+      BombBoom_19: 9190297905549320006
+      BombBoom_2: 3343062893406604663
+      BombBoom_20: -4731179576010369593
+      BombBoom_21: 3828686991582669881
+      BombBoom_3: -7737551261997771124
+      BombBoom_4: -4026714085382625376
+      BombBoom_5: 4907381434138007491
+      BombBoom_6: -1538309408779345272
+      BombBoom_7: -756147742939368648
+      BombBoom_8: 6333784894590054864
+      BombBoom_9: 7676932168729223617
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
