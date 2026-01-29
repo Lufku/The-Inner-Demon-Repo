@@ -83,7 +83,7 @@ ScriptedImporter:
       y: 0
       width: 0
       height: 0
-    spriteID: 984606b588442b147acf3af7d95145b5
+    spriteID: 35bece56c7d381f499d56c5352b27c80
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -107,7 +107,7 @@ ScriptedImporter:
       y: 523
       width: 164
       height: 604
-    spriteID: 6a32a670fb2850d4ba003ee1702b119e
+    spriteID: c7c72ccb6b12e924c97bf3c03829280a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -127,9 +127,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 823
       y: 399
-      width: 169
-      height: 173
-    spriteID: faef7ebe6eca0b3428d420efd37128ee
+      width: 163
+      height: 175
+    spriteID: 358717be65cdab54a9351f6805e46d14
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -137,8 +137,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -527, y: 156}
-    spritePosition: {x: 1350, y: 243}
+    uvTransform: {x: -533, y: 158}
+    spritePosition: {x: 1356, y: 241}
   - name: Mano Hecicera 1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -151,7 +151,7 @@ ScriptedImporter:
       y: 4
       width: 121
       height: 247
-    spriteID: 4f2709773a134ef49b0d9ef53c7d8400
+    spriteID: 4a436d818519cdb418ce32b6bce8d45a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -173,7 +173,7 @@ ScriptedImporter:
       y: 1135
       width: 123
       height: 236
-    spriteID: 7e4ca08802f750a47ba77f71682eb9f0
+    spriteID: 22b62e4831a29a340ab984b37a8231e5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -195,7 +195,7 @@ ScriptedImporter:
       y: 4
       width: 281
       height: 511
-    spriteID: 963cebc73b8d4174a90f9e04c37ba28d
+    spriteID: fb2074d491844614aa6a3fda6a29dd4d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -217,7 +217,7 @@ ScriptedImporter:
       y: 1724
       width: 162
       height: 252
-    spriteID: 6e4e2f9e51dd37a42bd4f3110286ac1f
+    spriteID: a98ad4311bea2374d881ae615ae1d31a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -239,7 +239,7 @@ ScriptedImporter:
       y: 4
       width: 333
       height: 387
-    spriteID: c5284dc0138c0504bb895a4477f724ef
+    spriteID: b1eab4078d5560f4891e5ed8c733acfd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -261,7 +261,7 @@ ScriptedImporter:
       y: 795
       width: 162
       height: 252
-    spriteID: 636e564d8d9c2414caebe669cc309273
+    spriteID: 3ec1b54c31dce0f47a75a32aadf14c84
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -283,7 +283,7 @@ ScriptedImporter:
       y: 1379
       width: 154
       height: 164
-    spriteID: 20eafe181cb5f2d4191706ba964ac06d
+    spriteID: fce6489cb2220264191c8a02483656c8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -305,7 +305,7 @@ ScriptedImporter:
       y: 1135
       width: 115
       height: 549
-    spriteID: 9c73f4957ec8b1045aad36c6ac285a03
+    spriteID: 23ee034a1210e2f4a8f64c2fa3e1ed01
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -327,7 +327,7 @@ ScriptedImporter:
       y: 523
       width: 96
       height: 173
-    spriteID: c5d97a100c364404dad6d1236f5a0b51
+    spriteID: d04c076f5a73ca345990de0865351909
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -349,7 +349,7 @@ ScriptedImporter:
       y: 4
       width: 252
       height: 852
-    spriteID: 3f077cd4553adb843bac461b9ba19ce6
+    spriteID: 2290b4f554287c043b33d5335498b2c2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -371,7 +371,7 @@ ScriptedImporter:
       y: 399
       width: 262
       height: 190
-    spriteID: b00d1e9d4560a8b4d8ad428e956622c1
+    spriteID: 0d975bb1149cd414d81de2de0a132770
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -393,7 +393,7 @@ ScriptedImporter:
       y: 1692
       width: 265
       height: 218
-    spriteID: a7cc2d7afb04e3c48aa30f0b9cef45b1
+    spriteID: 244bbe22d619ab14eb0852a49ca88239
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -415,7 +415,7 @@ ScriptedImporter:
       y: 864
       width: 251
       height: 852
-    spriteID: 67d10520f9e944e4e85d146f7dae23c6
+    spriteID: f172dad14b1526748abd0cf9f962ebdd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -437,7 +437,7 @@ ScriptedImporter:
       y: 597
       width: 262
       height: 190
-    spriteID: b22c45972ea0c7a4e8318ffac839b476
+    spriteID: 8ebc696dbdaf7b44cb01b3141799fe83
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -498,7 +498,7 @@ ScriptedImporter:
     spriteName: Brazo 1
     isGroup: 0
     parentIndex: -1
-    spriteID: 6a32a670fb2850d4ba003ee1702b119e
+    spriteID: c7c72ccb6b12e924c97bf3c03829280a
     layerID: 17
     mosaicPosition: {x: 264, y: 523}
     flatten: 0
@@ -508,7 +508,7 @@ ScriptedImporter:
     spriteName: Mano Hechicera 2
     isGroup: 0
     parentIndex: -1
-    spriteID: faef7ebe6eca0b3428d420efd37128ee
+    spriteID: 358717be65cdab54a9351f6805e46d14
     layerID: 16
     mosaicPosition: {x: 823, y: 399}
     flatten: 0
@@ -518,7 +518,7 @@ ScriptedImporter:
     spriteName: Mano Hecicera 1
     isGroup: 0
     parentIndex: -1
-    spriteID: 4f2709773a134ef49b0d9ef53c7d8400
+    spriteID: 4a436d818519cdb418ce32b6bce8d45a
     layerID: 15
     mosaicPosition: {x: 894, y: 4}
     flatten: 0
@@ -528,7 +528,7 @@ ScriptedImporter:
     spriteName: Mano 1
     isGroup: 0
     parentIndex: -1
-    spriteID: 7e4ca08802f750a47ba77f71682eb9f0
+    spriteID: 22b62e4831a29a340ab984b37a8231e5
     layerID: 14
     mosaicPosition: {x: 387, y: 1135}
     flatten: 0
@@ -538,7 +538,7 @@ ScriptedImporter:
     spriteName: 'Jersei '
     isGroup: 0
     parentIndex: -1
-    spriteID: 963cebc73b8d4174a90f9e04c37ba28d
+    spriteID: fb2074d491844614aa6a3fda6a29dd4d
     layerID: 13
     mosaicPosition: {x: 264, y: 4}
     flatten: 0
@@ -548,7 +548,7 @@ ScriptedImporter:
     spriteName: Oreja 1
     isGroup: 0
     parentIndex: -1
-    spriteID: 6e4e2f9e51dd37a42bd4f3110286ac1f
+    spriteID: a98ad4311bea2374d881ae615ae1d31a
     layerID: 12
     mosaicPosition: {x: 4, y: 1724}
     flatten: 0
@@ -558,7 +558,7 @@ ScriptedImporter:
     spriteName: 'Cabesa '
     isGroup: 0
     parentIndex: -1
-    spriteID: c5284dc0138c0504bb895a4477f724ef
+    spriteID: b1eab4078d5560f4891e5ed8c733acfd
     layerID: 11
     mosaicPosition: {x: 553, y: 4}
     flatten: 0
@@ -568,7 +568,7 @@ ScriptedImporter:
     spriteName: Oreja 2
     isGroup: 0
     parentIndex: -1
-    spriteID: 636e564d8d9c2414caebe669cc309273
+    spriteID: 3ec1b54c31dce0f47a75a32aadf14c84
     layerID: 10
     mosaicPosition: {x: 553, y: 795}
     flatten: 0
@@ -578,7 +578,7 @@ ScriptedImporter:
     spriteName: Colita UwU
     isGroup: 0
     parentIndex: -1
-    spriteID: 20eafe181cb5f2d4191706ba964ac06d
+    spriteID: fce6489cb2220264191c8a02483656c8
     layerID: 9
     mosaicPosition: {x: 387, y: 1379}
     flatten: 0
@@ -588,7 +588,7 @@ ScriptedImporter:
     spriteName: Brazo 2
     isGroup: 0
     parentIndex: -1
-    spriteID: 9c73f4957ec8b1045aad36c6ac285a03
+    spriteID: 23ee034a1210e2f4a8f64c2fa3e1ed01
     layerID: 8
     mosaicPosition: {x: 264, y: 1135}
     flatten: 0
@@ -598,7 +598,7 @@ ScriptedImporter:
     spriteName: Brazo 2
     isGroup: 0
     parentIndex: -1
-    spriteID: c5d97a100c364404dad6d1236f5a0b51
+    spriteID: d04c076f5a73ca345990de0865351909
     layerID: 7
     mosaicPosition: {x: 436, y: 523}
     flatten: 0
@@ -608,7 +608,7 @@ ScriptedImporter:
     spriteName: Pierna 1
     isGroup: 0
     parentIndex: -1
-    spriteID: 3f077cd4553adb843bac461b9ba19ce6
+    spriteID: 2290b4f554287c043b33d5335498b2c2
     layerID: 6
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
@@ -618,7 +618,7 @@ ScriptedImporter:
     spriteName: Pie 1
     isGroup: 0
     parentIndex: -1
-    spriteID: b00d1e9d4560a8b4d8ad428e956622c1
+    spriteID: 0d975bb1149cd414d81de2de0a132770
     layerID: 5
     mosaicPosition: {x: 553, y: 399}
     flatten: 0
@@ -628,7 +628,7 @@ ScriptedImporter:
     spriteName: Poto
     isGroup: 0
     parentIndex: -1
-    spriteID: a7cc2d7afb04e3c48aa30f0b9cef45b1
+    spriteID: 244bbe22d619ab14eb0852a49ca88239
     layerID: 4
     mosaicPosition: {x: 264, y: 1692}
     flatten: 0
@@ -638,7 +638,7 @@ ScriptedImporter:
     spriteName: Pierna 2
     isGroup: 0
     parentIndex: -1
-    spriteID: 67d10520f9e944e4e85d146f7dae23c6
+    spriteID: f172dad14b1526748abd0cf9f962ebdd
     layerID: 3
     mosaicPosition: {x: 4, y: 864}
     flatten: 0
@@ -648,7 +648,7 @@ ScriptedImporter:
     spriteName: Pie 2
     isGroup: 0
     parentIndex: -1
-    spriteID: b22c45972ea0c7a4e8318ffac839b476
+    spriteID: 8ebc696dbdaf7b44cb01b3141799fe83
     layerID: 2
     mosaicPosition: {x: 553, y: 597}
     flatten: 0
@@ -658,7 +658,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: 8c8a88f208f68554da3973864535f601
+    spriteID: 77b6d2c4ba59c5a4c9cee648e5a253a9
     layerID: 1
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
