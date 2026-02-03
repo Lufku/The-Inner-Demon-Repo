@@ -13767,16 +13767,6 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
-  - name: Brazo 1
-    spriteName: Brazo 1
-    isGroup: 0
-    parentIndex: -1
-    spriteID: c7c72ccb6b12e924c97bf3c03829280a
-    layerID: 17
-    mosaicPosition: {x: 264, y: 523}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
   - name: Mano Hechicera 2
     spriteName: Mano Hechicera 2
     isGroup: 0
@@ -13804,6 +13794,16 @@ ScriptedImporter:
     spriteID: 22b62e4831a29a340ab984b37a8231e5
     layerID: 14
     mosaicPosition: {x: 387, y: 1135}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Brazo 1
+    spriteName: Brazo 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c7c72ccb6b12e924c97bf3c03829280a
+    layerID: 17
+    mosaicPosition: {x: 264, y: 523}
     flatten: 0
     isImported: 1
     isVisible: 1
