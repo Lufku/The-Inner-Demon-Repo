@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class WallSpawner : MonoBehaviour
@@ -10,16 +11,14 @@ public class WallSpawner : MonoBehaviour
     public int baseLife = 10;
     public int lifeIncrease = 10;
 
-    public float spawnX = 10f;
-    public float spawnYMin = -3f;
-    public float spawnYMax = 3f;
+    public float spawnDelay = 0.5f;
 
     void Start()
     {
-        SpawnWalls();
+        StartCoroutine(SpawnWalls());
     }
 
-    void SpawnWalls()
+    IEnumerator SpawnWalls()
     {
         for (int type = 1; type <= wallTypes; type++)
         {
@@ -27,18 +26,17 @@ public class WallSpawner : MonoBehaviour
 
             for (int i = 0; i < amount; i++)
             {
-                Vector2 spawnPos = new Vector2(
-                    spawnX,
-                    Random.Range(spawnYMin, spawnYMax)
-                );
+                // MISMA ALTURA SIEMPRE
+                Vector2 spawnPos = transform.position;
 
                 GameObject wall = Instantiate(wallPrefab, spawnPos, Quaternion.identity);
 
                 Wall wallScript = wall.GetComponent<Wall>();
-                wallScript.life = baseLife + (type - 1) * lifeIncrease;
+                wallScript.SetType(type, baseLife, lifeIncrease);
 
-                // Tag opcional
                 wall.tag = "Wall" + type;
+
+                yield return new WaitForSeconds(spawnDelay);
             }
         }
     }
