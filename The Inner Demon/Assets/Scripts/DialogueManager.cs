@@ -7,7 +7,7 @@ public class DialogueManager : MonoBehaviour
 
     string[] dialogos = {
         "You look upset, what happened to you to be like that?",
-        "Well... It is difficult to talk about that, it happened recently."
+        "Well... It is difficult to talk about that, it happened recently.",
     };
 
     int indice = 0;
