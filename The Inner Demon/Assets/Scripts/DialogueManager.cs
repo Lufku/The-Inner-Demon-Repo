@@ -35,6 +35,9 @@ public class DialogueManager : MonoBehaviour
         
 
 
+
+        
+
     };
 
     int indice = 0;
