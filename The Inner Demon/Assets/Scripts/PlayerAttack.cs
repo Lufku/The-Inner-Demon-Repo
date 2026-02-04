@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -8,129 +6,91 @@ public class PlayerAttack : MonoBehaviour
     public Transform handPoint;
     public PlayerStats stats;
 
-    [Header("Attack Prefabs")]
-    public GameObject normalAttack;
-    public GameObject freezeAttack;
-    public GameObject bombAttack;
-    public GameObject fireball;
-    public GameObject laserBeam;
+    [Header("Projectiles")]
+    public GameObject normalProjectile;
+    public GameObject fireballProjectile;
+    public GameObject freezeProjectile;
+    public GameObject bombProjectile;
+    public GameObject laserBeamPrefab;
 
-    private int currentAttack = 1;
-    private ProjectileBase preparedProjectile;
-    private Vector2 shootDirection;
+    private AttackType currentAttackType = AttackType.None;
 
-    private Dictionary<int, float> cooldowns = new Dictionary<int, float>();
-    private Dictionary<int, float> lastUse = new Dictionary<int, float>();
-
-    void Start()
+    public enum AttackType
     {
-        cooldowns[1] = 1f;   // Normal
-        cooldowns[2] = 5f;   // Freeze
-        cooldowns[3] = 5f;   // Bomb
-        cooldowns[4] = 5f;   // Fireball
-        cooldowns[5] = 15f;  // Laser
-
-        for (int i = 1; i <= 5; i++)
-            lastUse[i] = -999f;
+        None,
+        Normal,
+        Fireball,
+        Freeze,
+        Bomb,
+        Laser
     }
 
     void Update()
     {
-        // Cambio de ataque
-        if (Input.GetKeyDown(KeyCode.Alpha1)) PrepareAttack(1);
-        if (Input.GetKeyDown(KeyCode.Alpha2)) PrepareAttack(2);
-        if (Input.GetKeyDown(KeyCode.Alpha3)) PrepareAttack(3);
-        if (Input.GetKeyDown(KeyCode.Alpha4)) PrepareAttack(4);
-        if (Input.GetKeyDown(KeyCode.Alpha5)) PrepareAttack(5); // Laser
-
-        // Lanzar ataque
-        if (Input.GetMouseButtonDown(0))
-            ReleasePreparedAttack();
-
-        // Escudo con click derecho
-        if (Input.GetMouseButtonDown(1))
-            StartCoroutine(ShieldCoroutine());
+        HandleAttackSelection();
+        HandleAttackExecution();
     }
 
-    void PrepareAttack(int id)
+    void HandleAttackSelection()
     {
-        currentAttack = id;
+        if (Input.GetKeyDown(KeyCode.Alpha1)) currentAttackType = AttackType.Normal;
+        if (Input.GetKeyDown(KeyCode.Alpha2)) currentAttackType = AttackType.Fireball;
+        if (Input.GetKeyDown(KeyCode.Alpha3)) currentAttackType = AttackType.Freeze;
+        if (Input.GetKeyDown(KeyCode.Alpha4)) currentAttackType = AttackType.Bomb;
+        if (Input.GetKeyDown(KeyCode.Alpha5)) currentAttackType = AttackType.Laser;
+    }
 
-        // Bomba y láser NO se preparan en la mano
-        if (id == 3 || id == 5)
-        {
-            if (preparedProjectile != null)
-                Destroy(preparedProjectile.gameObject);
-
-            preparedProjectile = null;
+    void HandleAttackExecution()
+    {
+        if (!Input.GetMouseButtonDown(0) || currentAttackType == AttackType.None)
             return;
-        }
-
-        // Preparar proyectil normal
-        GameObject prefab = GetProjectilePrefab();
-        if (prefab == null) return;
-
-        if (preparedProjectile != null)
-            Destroy(preparedProjectile.gameObject);
-
-        GameObject obj = Instantiate(prefab);
-        preparedProjectile = obj.GetComponent<ProjectileBase>();
-        preparedProjectile.Prepare(handPoint, stats);
 
         animator.SetTrigger("Attack");
     }
 
-    void ReleasePreparedAttack()
+    // Llamado desde el frame 25
+    public void TriggerAttack()
     {
-        if (Time.time < lastUse[currentAttack] + cooldowns[currentAttack])
-            return;
+        Vector2 dir = GetMouseDirection();
 
-        lastUse[currentAttack] = Time.time;
-
-        Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 dir = mousePos - handPoint.position;
-        shootDirection = dir.normalized;
-
-
-        // Láser
-        if (currentAttack == 5)
+        switch (currentAttackType)
         {
-            GameObject laser = Instantiate(laserBeam, handPoint.position, Quaternion.identity);
-            laser.GetComponent<LaserBeam>().Init(shootDirection);
-            return;
-        }
+            case AttackType.Normal:
+                LaunchProjectile(normalProjectile, dir);
+                break;
 
-        // Bomba
-        if (currentAttack == 3)
-        {
-            GameObject bomb = Instantiate(bombAttack, handPoint.position, Quaternion.identity);
-            bomb.GetComponent<ProjectileBase>().Launch(shootDirection);
-            return;
-        }
+            case AttackType.Fireball:
+                LaunchProjectile(fireballProjectile, dir);
+                break;
 
-        // Proyectiles normales
-        if (preparedProjectile == null) return;
+            case AttackType.Freeze:
+                LaunchProjectile(freezeProjectile, dir);
+                break;
 
-        preparedProjectile.Launch(shootDirection);
-        preparedProjectile = null;
-    }
+            case AttackType.Bomb:
+                LaunchProjectile(bombProjectile, dir);
+                break;
 
-    GameObject GetProjectilePrefab()
-    {
-        switch (currentAttack)
-        {
-            case 1: return normalAttack;
-            case 2: return freezeAttack;
-            case 4: return fireball;
-            default: return null;
+            case AttackType.Laser:
+                LaserBeam beam = Instantiate(laserBeamPrefab, handPoint.position, Quaternion.identity)
+                    .GetComponent<LaserBeam>();
+                beam.Init(dir);
+                break;
         }
     }
 
-    IEnumerator ShieldCoroutine()
+    void LaunchProjectile(GameObject prefab, Vector2 dir)
     {
-        stats.invulnerable = true;
-        yield return new WaitForSeconds(5f);
-        stats.invulnerable = false;
+        GameObject proj = Instantiate(prefab, handPoint.position, Quaternion.identity);
+
+        ProjectileBase pb = proj.GetComponent<ProjectileBase>();
+        pb.Prepare(handPoint, stats);
+        pb.Launch(dir);
+    }
+
+    Vector2 GetMouseDirection()
+    {
+        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        return (mouseWorld - handPoint.position).normalized;
     }
 }

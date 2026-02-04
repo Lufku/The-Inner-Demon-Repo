@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public Animator animator;
-    public SpriteRenderer spriteRenderer;
+    public Transform visual; // ← en vez de SpriteRenderer
 
     private Rigidbody2D rb;
     private float moveInput;
@@ -17,20 +17,19 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Movimiento horizontal
         moveInput = Input.GetAxisRaw("Horizontal");
 
-        // Animaci�n de correr
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
 
-        // Voltear sprite
-        if (moveInput != 0)
-            spriteRenderer.flipX = moveInput < 0;
+        // Voltear el personaje
+        if (moveInput < 0)
+            visual.localScale = new Vector3(-1, 1, 1);
+        else if (moveInput > 0)
+            visual.localScale = new Vector3(1, 1, 1);
     }
 
     void FixedUpdate()
     {
-        // Aplicar movimiento
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
     }
 }

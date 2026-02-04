@@ -4,32 +4,29 @@ public class BombAttack : ProjectileBase
 {
     public float radius = 1.5f;
     public int damage = 10;
-    public float fuseTime = 2f; // tiempo de mecha antes de explotar
+    public float fuseTime = 2f;
 
     private bool exploded = false;
+    private Animator animator;
+
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Start()
     {
-        // Empieza la cuenta atrás de la mecha
-        Invoke(nameof(Explode), fuseTime);
+        // A los 2 segundos se activa la explosión
+        Invoke(nameof(TriggerExplosion), fuseTime);
     }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (!launched || exploded) return;
-
-        // Si impacta contra algo, explota inmediatamente
-        Explode();
-    }
-
-    void Explode()
+    void TriggerExplosion()
     {
         if (exploded) return;
         exploded = true;
 
-        // Daño en área
+        // Hacer daño inmediatamente
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, radius);
-
         foreach (var h in hits)
         {
             Wall w = h.GetComponent<Wall>();
@@ -37,13 +34,23 @@ public class BombAttack : ProjectileBase
                 w.TakeDamage(damage);
         }
 
+        // Activar animación de explosión
+        animator.SetTrigger("Explode");
+
+        // IMPORTANTE: NO destruir aquí
+        // La animación llamará a DestroyBomb() al terminar
+    }
+
+    // Este método lo llamará un Animation Event al final de la animación
+    public void DestroyBomb()
+    {
         Destroy(gameObject);
     }
 
-    // Para ver el radio en el editor
-    void OnDrawGizmosSelected()
+    void OnTriggerEnter2D(Collider2D col)
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radius);
+        // Si choca antes de explotar, explota igual
+        if (!exploded)
+            TriggerExplosion();
     }
 }
