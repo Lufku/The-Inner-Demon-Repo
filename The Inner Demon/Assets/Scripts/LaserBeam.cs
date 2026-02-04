@@ -4,11 +4,20 @@ using System.Collections;
 public class LaserBeam : MonoBehaviour
 {
     public float damagePerSecond = 5f;
-    private Vector2 direction;   // ← FALTABA ESTO
+    public float animationLength = 1f; // duración total de la animación en segundos
+
+    private Vector2 direction;
+    private float startDamageTime;
+    private float endDamageTime;
 
     public void Init(Vector2 dir)
     {
-        direction = dir.normalized;   // ← Ahora sí existe
+        direction = dir.normalized;
+
+        float frameTime = animationLength / 240f;
+        startDamageTime = frameTime * 78f;
+        endDamageTime = frameTime * 240f;
+
         StartCoroutine(Fire());
     }
 
@@ -16,14 +25,17 @@ public class LaserBeam : MonoBehaviour
     {
         float time = 0f;
 
-        while (time < 3f)
+        while (time < animationLength)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction);
-
-            if (hit.collider)
+            if (time >= startDamageTime && time <= endDamageTime)
             {
-                Wall w = hit.collider.GetComponent<Wall>();
-                if (w) w.TakeDamage((int)damagePerSecond);
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, direction);
+                if (hit.collider)
+                {
+                    Wall w = hit.collider.GetComponent<Wall>();
+                    if (w)
+                        w.TakeDamage((int)damagePerSecond);
+                }
             }
 
             time += Time.deltaTime;

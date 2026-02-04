@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class ProjectileBase : MonoBehaviour
+public class ProjectileBase : MonoBehaviour
 {
     protected Vector2 direction;
     protected PlayerStats stats;
