@@ -31,7 +31,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Diálogos")]
     public LineaDialogo[] dialogos = new LineaDialogo[]
     {
-        new LineaDialogo { texto = "You look upset, it´s everything ok?", lado = LadoPersonaje.Izquierda },
+        new LineaDialogo { texto = "It´s everything ok?", lado = LadoPersonaje.Izquierda },
         new LineaDialogo { texto = "Well... It is difficult to talk about that, it happened recently.", lado = LadoPersonaje.Derecha },
         new LineaDialogo { texto = "I know you for a long time, you can tell me what´s the problem.", lado = LadoPersonaje.Izquierda },
         new LineaDialogo { texto = "Sighn... My sister died in a car accident and...", lado = LadoPersonaje.Derecha },
