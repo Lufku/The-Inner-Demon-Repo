@@ -15,6 +15,14 @@ public class FreezeAttack : ProjectileBase
             w.TakeDamage(baseDamage);
             StartCoroutine(Freeze(w));
             Destroy(gameObject);
+            return;
+        }
+
+        Enemy e = col.GetComponent<Enemy>();
+        if (e)
+        {
+            e.TakeDamage(baseDamage);
+            Destroy(gameObject);
         }
     }
 

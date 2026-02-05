@@ -1,46 +1,92 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class LaserBeam : MonoBehaviour
 {
-    public float damagePerSecond = 5f;
-    public float animationLength = 1f; // duración total de la animación en segundos
+    [Header("Damage")]
+    public float damageInterval = 0.1f;
+    public int damage = 1;
 
-    private Vector2 direction;
-    private float startDamageTime;
-    private float endDamageTime;
+    [Header("Raycast")]
+    public LayerMask hitMask;
+    public float laserWorldLength = 6f;
 
-    public void Init(Vector2 dir)
+    [Header("Collision Object")]
+    public GameObject collisionPrefab;
+
+    private float timer = 0f;
+    private bool active = false;
+    private Animator animator;
+    private SpriteRenderer sr;
+
+    private GameObject collisionObj;
+    private BoxCollider2D col;
+
+    void Awake()
     {
-        direction = dir.normalized;
-
-        float frameTime = animationLength / 240f;
-        startDamageTime = frameTime * 78f;
-        endDamageTime = frameTime * 240f;
-
-        StartCoroutine(Fire());
+        animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
-    IEnumerator Fire()
+    public void Init(Vector2 dir, PlayerStats stats)
     {
-        float time = 0f;
+        damage = stats.strength;
 
-        while (time < animationLength)
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
+
+    void Update()
+    {
+        if (!active)
+            return;
+
+        timer += Time.deltaTime;
+        if (timer >= damageInterval)
         {
-            if (time >= startDamageTime && time <= endDamageTime)
-            {
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, direction);
-                if (hit.collider)
-                {
-                    Wall w = hit.collider.GetComponent<Wall>();
-                    if (w)
-                        w.TakeDamage((int)damagePerSecond);
-                }
-            }
-
-            time += Time.deltaTime;
-            yield return null;
+            timer = 0f;
+            DoDamage();
         }
+    }
+
+    void DoDamage()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, laserWorldLength, hitMask);
+
+        if (hit.collider != null)
+        {
+            Wall w = hit.collider.GetComponent<Wall>();
+            if (w != null) w.TakeDamage(damage);
+
+            Enemy e = hit.collider.GetComponent<Enemy>();
+            if (e != null) e.TakeDamage(damage);
+        }
+    }
+
+    public void ActivateLaser()
+    {
+        active = true;
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, laserWorldLength, hitMask);
+        float distance = hit.collider ? hit.distance : laserWorldLength;
+
+        float spriteWidth = sr.sprite.bounds.size.x;
+        float scaleX = distance / spriteWidth;
+
+        transform.localScale = new Vector3(scaleX, 1, 1);
+
+        collisionObj = Instantiate(collisionPrefab);
+        collisionObj.transform.position = transform.position;
+        collisionObj.transform.rotation = transform.rotation;
+
+        col = collisionObj.GetComponent<BoxCollider2D>();
+        col.size = new Vector2(distance, 1);
+        col.offset = new Vector2(distance * 0.5f, 0);
+    }
+
+    public void DestroyLaser()
+    {
+        if (collisionObj != null)
+            Destroy(collisionObj);
 
         Destroy(gameObject);
     }

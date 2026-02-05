@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7146738599546706563}
   - component: {fileID: 4815536248957004483}
-  - component: {fileID: 8296122084254169649}
   - component: {fileID: -4014143579425998173}
+  - component: {fileID: 8400574326860920257}
   m_Layer: 0
   m_Name: LaserBeam
   m_TagString: Untagged
@@ -27,10 +27,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5193852079320426394}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.9910431, w: -0.13354295}
+  m_LocalRotation: {x: -0, y: 0, z: -0.99104273, w: -0.13354509}
   m_LocalPosition: {x: 49.13, y: -0.91, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -195.349}
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2151244663191871890, guid: 22dcbf3c827174c44afd6fc844c7ec0d, type: 3}
+  m_Sprite: {fileID: -1183341271830312317, guid: f2a2325ee2effe84dbe9553e7a181106, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -92,7 +92,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &8296122084254169649
+--- !u!114 &-4014143579425998173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5193852079320426394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbdd6e97ddab82a42ae5404501ff7525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaserBeam
+  damageInterval: 0.1
+  damage: 1
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  laserWorldLength: 10
+  collisionPrefab: {fileID: 8130613667325758768, guid: 6ab1cc6e232dccb4983cfb8282f20466, type: 3}
+--- !u!95 &8400574326860920257
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -114,17 +133,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-4014143579425998173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5193852079320426394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbdd6e97ddab82a42ae5404501ff7525, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LaserBeam
-  damagePerSecond: 5
-  animationLength: 1
