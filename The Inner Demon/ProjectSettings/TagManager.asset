@@ -12,6 +12,7 @@ TagManager:
   - Wall4
   - Wall5
   - Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX

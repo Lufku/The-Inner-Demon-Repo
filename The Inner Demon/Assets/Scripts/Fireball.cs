@@ -13,6 +13,14 @@ public class Fireball : ProjectileBase
             w.TakeDamage(baseDamage);
             StartCoroutine(Burn(w));
             Destroy(gameObject);
+            return;
+        }
+
+        Enemy e = col.GetComponent<Enemy>();
+        if (e)
+        {
+            e.TakeDamage(baseDamage);
+            Destroy(gameObject);
         }
     }
 

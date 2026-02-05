@@ -16,7 +16,6 @@ public class BombAttack : ProjectileBase
 
     void Start()
     {
-        // A los 2 segundos se activa la explosión
         Invoke(nameof(TriggerExplosion), fuseTime);
     }
 
@@ -25,23 +24,19 @@ public class BombAttack : ProjectileBase
         if (exploded) return;
         exploded = true;
 
-        // Hacer daño inmediatamente
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, radius);
         foreach (var h in hits)
         {
             Wall w = h.GetComponent<Wall>();
-            if (w)
-                w.TakeDamage(damage);
+            if (w) w.TakeDamage(damage);
+
+            Enemy e = h.GetComponent<Enemy>();
+            if (e) e.TakeDamage(damage);
         }
 
-        // Activar animación de explosión
         animator.SetTrigger("Explode");
-
-        // IMPORTANTE: NO destruir aquí
-        // La animación llamará a DestroyBomb() al terminar
     }
 
-    // Este método lo llamará un Animation Event al final de la animación
     public void DestroyBomb()
     {
         Destroy(gameObject);
@@ -49,7 +44,6 @@ public class BombAttack : ProjectileBase
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        // Si choca antes de explotar, explota igual
         if (!exploded)
             TriggerExplosion();
     }

@@ -13,6 +13,19 @@ public class PlayerAttack : MonoBehaviour
     public GameObject bombProjectile;
     public GameObject laserBeamPrefab;
 
+    [Header("Cooldowns")]
+    public float normalCooldown = 1f;
+    public float fireballCooldown = 5f;
+    public float freezeCooldown = 5f;
+    public float bombCooldown = 7f;
+    public float laserCooldown = 30f;
+
+    private float normalTimer = 0f;
+    private float fireballTimer = 0f;
+    private float freezeTimer = 0f;
+    private float bombTimer = 0f;
+    private float laserTimer = 0f;
+
     private AttackType currentAttackType = AttackType.None;
 
     public enum AttackType
@@ -27,6 +40,12 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
+        normalTimer += Time.deltaTime;
+        fireballTimer += Time.deltaTime;
+        freezeTimer += Time.deltaTime;
+        bombTimer += Time.deltaTime;
+        laserTimer += Time.deltaTime;
+
         HandleAttackSelection();
         HandleAttackExecution();
     }
@@ -45,10 +64,23 @@ public class PlayerAttack : MonoBehaviour
         if (!Input.GetMouseButtonDown(0) || currentAttackType == AttackType.None)
             return;
 
-        animator.SetTrigger("Attack");
+        bool canAttack =
+            (currentAttackType == AttackType.Normal && normalTimer >= normalCooldown) ||
+            (currentAttackType == AttackType.Fireball && fireballTimer >= fireballCooldown) ||
+            (currentAttackType == AttackType.Freeze && freezeTimer >= freezeCooldown) ||
+            (currentAttackType == AttackType.Bomb && bombTimer >= bombCooldown) ||
+            (currentAttackType == AttackType.Laser && laserTimer >= laserCooldown);
+
+        if (!canAttack)
+            return;
+
+        if (currentAttackType == AttackType.Laser)
+            animator.SetTrigger("LaserBeamAttack");
+        else
+            animator.SetTrigger("Attack");
     }
 
-    // Llamado desde el frame 25
+    // Llamado desde AnimationRelay
     public void TriggerAttack()
     {
         Vector2 dir = GetMouseDirection();
@@ -56,25 +88,30 @@ public class PlayerAttack : MonoBehaviour
         switch (currentAttackType)
         {
             case AttackType.Normal:
+                normalTimer = 0f;
                 LaunchProjectile(normalProjectile, dir);
                 break;
 
             case AttackType.Fireball:
+                fireballTimer = 0f;
                 LaunchProjectile(fireballProjectile, dir);
                 break;
 
             case AttackType.Freeze:
+                freezeTimer = 0f;
                 LaunchProjectile(freezeProjectile, dir);
                 break;
 
             case AttackType.Bomb:
+                bombTimer = 0f;
                 LaunchProjectile(bombProjectile, dir);
                 break;
 
             case AttackType.Laser:
-                LaserBeam beam = Instantiate(laserBeamPrefab, handPoint.position, Quaternion.identity)
-                    .GetComponent<LaserBeam>();
-                beam.Init(dir);
+                laserTimer = 0f;
+                GameObject obj = Instantiate(laserBeamPrefab, handPoint.position, Quaternion.identity);
+                LaserBeam beam = obj.GetComponent<LaserBeam>();
+                beam.Init(dir, stats);
                 break;
         }
     }
