@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public enum LadoPersonaje
 {
@@ -86,7 +87,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Fin del diálogo");
+            SceneManager.LoadScene("PreLevel1");
         }
     }
 
