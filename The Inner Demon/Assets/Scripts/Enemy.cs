@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
@@ -17,6 +17,10 @@ public class Enemy : MonoBehaviour
     public float fireballSpeed = 6f;
 
     private float fireTimer = 0f;
+
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip fireballSound;   // ← NUEVO
 
     [Header("Movement Area")]
     public Vector2 minBounds;
@@ -83,12 +87,20 @@ public class Enemy : MonoBehaviour
         if (fireballPrefab == null || handPoint == null)
             return;
 
+        PlayAttackSound(); // ← SONIDO AQUÍ
+
         GameObject obj = Instantiate(fireballPrefab, handPoint.position, Quaternion.identity);
 
         Vector2 dir = (PlayerPosition() - (Vector2)handPoint.position).normalized;
 
         FireballDemon fb = obj.GetComponent<FireballDemon>();
         fb.Launch(dir, fireballSpeed);
+    }
+
+    void PlayAttackSound()
+    {
+        if (audioSource != null && fireballSound != null)
+            audioSource.PlayOneShot(fireballSound);
     }
 
     Vector2 PlayerPosition()
@@ -110,7 +122,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        SceneManager.LoadScene("Good Ending"); Destroy(gameObject);
+        SceneManager.LoadScene("Good Ending");
         Destroy(gameObject);
     }
 }

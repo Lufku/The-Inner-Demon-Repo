@@ -6,6 +6,14 @@ public class PlayerAttack : MonoBehaviour
     public Transform handPoint;
     public PlayerStats stats;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip normalSound;
+    public AudioClip fireballSound;
+    public AudioClip freezeSound;
+    public AudioClip bombSound;
+    public AudioClip laserSound;
+
     [Header("Projectiles")]
     public GameObject normalProjectile;
     public GameObject fireballProjectile;
@@ -85,6 +93,8 @@ public class PlayerAttack : MonoBehaviour
     {
         Vector2 dir = GetMouseDirection();
 
+        PlayAttackSound(); // ← SONIDO AQUÍ
+
         switch (currentAttackType)
         {
             case AttackType.Normal:
@@ -114,6 +124,26 @@ public class PlayerAttack : MonoBehaviour
                 beam.Init(dir, stats);
                 break;
         }
+    }
+
+    void PlayAttackSound()
+    {
+        if (audioSource == null)
+            return;
+
+        AudioClip clip = null;
+
+        switch (currentAttackType)
+        {
+            case AttackType.Normal: clip = normalSound; break;
+            case AttackType.Fireball: clip = fireballSound; break;
+            case AttackType.Freeze: clip = freezeSound; break;
+            case AttackType.Bomb: clip = bombSound; break;
+            case AttackType.Laser: clip = laserSound; break;
+        }
+
+        if (clip != null)
+            audioSource.PlayOneShot(clip);
     }
 
     void LaunchProjectile(GameObject prefab, Vector2 dir)
