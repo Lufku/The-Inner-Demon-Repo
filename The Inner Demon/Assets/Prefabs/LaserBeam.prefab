@@ -109,7 +109,8 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  laserWorldLength: 10
+  laserWorldLength: 5
+  lengthMultiplier: 0.4
   collisionPrefab: {fileID: 8130613667325758768, guid: 6ab1cc6e232dccb4983cfb8282f20466, type: 3}
 --- !u!95 &8400574326860920257
 Animator:

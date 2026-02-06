@@ -10,6 +10,9 @@ public class LaserBeam : MonoBehaviour
     public LayerMask hitMask;
     public float laserWorldLength = 6f;
 
+    [Header("Length Control")]
+    public float lengthMultiplier = 1f;   // ← NUEVO
+
     [Header("Collision Object")]
     public GameObject collisionPrefab;
 
@@ -68,6 +71,9 @@ public class LaserBeam : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, laserWorldLength, hitMask);
         float distance = hit.collider ? hit.distance : laserWorldLength;
+
+        // ← APLICAMOS EL MULTIPLICADOR
+        distance *= lengthMultiplier;
 
         float spriteWidth = sr.sprite.bounds.size.x;
         float scaleX = distance / spriteWidth;
