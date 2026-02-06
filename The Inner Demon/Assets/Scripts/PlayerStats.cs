@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
     [Header("Stats")]
     public int maxHealth = 20;
-    public int strength = 1;   // ← FALTABA ESTO
+    public int strength = 1;
     private int currentHealth;
 
     [Header("Health Bar")]
@@ -31,6 +32,7 @@ public class PlayerStats : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("PLAYER DEAD");
+        // Cambiar a Bad Ending
+        SceneManager.LoadScene("Bad Ending");
     }
 }

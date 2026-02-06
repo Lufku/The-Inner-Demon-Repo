@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -109,6 +110,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        SceneManager.LoadScene("Good Ending"); Destroy(gameObject);
         Destroy(gameObject);
     }
 }

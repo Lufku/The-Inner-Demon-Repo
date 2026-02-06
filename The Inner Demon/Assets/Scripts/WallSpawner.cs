@@ -1,5 +1,6 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WallSpawner : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class WallSpawner : MonoBehaviour
     public int lifeIncrease = 10;
 
     public float spawnDelay = 0.5f;
+
+    private int destroyedWalls = 0;   // ← CONTADOR DE PAREDES DESTRUIDAS
+    public int wallsNeeded = 12;      // ← CUÁNTAS NECESITAS PARA CAMBIAR DE ESCENA
 
     void Start()
     {
@@ -26,7 +30,6 @@ public class WallSpawner : MonoBehaviour
 
             for (int i = 0; i < amount; i++)
             {
-                // MISMA ALTURA SIEMPRE
                 Vector2 spawnPos = transform.position;
 
                 GameObject wall = Instantiate(wallPrefab, spawnPos, Quaternion.identity);
@@ -34,10 +37,23 @@ public class WallSpawner : MonoBehaviour
                 Wall wallScript = wall.GetComponent<Wall>();
                 wallScript.SetType(type, baseLife, lifeIncrease);
 
+                // IMPORTANTE: asignar el spawner
+                wallScript.spawner = this;
+
                 wall.tag = "Wall" + type;
 
                 yield return new WaitForSeconds(spawnDelay);
             }
+        }
+    }
+
+    public void WallDestroyed()
+    {
+        destroyedWalls++;
+
+        if (destroyedWalls >= wallsNeeded)
+        {
+            SceneManager.LoadScene("PreFinalBoss");
         }
     }
 }

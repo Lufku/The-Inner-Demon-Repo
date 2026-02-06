@@ -2237,7 +2237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b676d3db15d1d44bbcbcd7a8f950ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  maxHealth: 50
+  maxHealth: 100
   healthBar: {fileID: 712486145}
   fireballPrefab: {fileID: 8165904238768692321, guid: 317d150b7f4c8b44692ea0644f70871b, type: 3}
   handPoint: {fileID: 1242381822}
@@ -2478,6 +2478,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 722864764}
+    - target: {fileID: 7021937237920478806, guid: 61540821d491c564dbf25d773af01e04, type: 3}
+      propertyPath: maxHealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 7193084617490557030, guid: 61540821d491c564dbf25d773af01e04, type: 3}
       propertyPath: m_Name
       value: Player

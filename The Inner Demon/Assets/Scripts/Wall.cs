@@ -5,6 +5,9 @@ public class Wall : MonoBehaviour
     public int life;
     public float speed = 3f;
 
+    [HideInInspector]
+    public WallSpawner spawner;
+
     private SpriteRenderer sr;
 
     void Awake()
@@ -21,8 +24,7 @@ public class Wall : MonoBehaviour
     {
         life = baseLife + (type - 1) * lifeIncrease;
 
-        // Blanco → Negro
-        float t = (float)(type - 1) / 4f; // 0 a 1
+        float t = (float)(type - 1) / 4f;
         sr.color = Color.Lerp(Color.white, Color.black, t);
     }
 
@@ -31,7 +33,15 @@ public class Wall : MonoBehaviour
         life -= damage;
         if (life <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    void Die()
+    {
+        if (spawner != null)
+            spawner.WallDestroyed();
+
+        Destroy(gameObject);
     }
 }

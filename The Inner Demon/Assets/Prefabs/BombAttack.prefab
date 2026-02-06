@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BombAttack
   speed: 5
   radius: 1.5
-  damage: 10
+  damage: 15
   fuseTime: 2
 --- !u!50 &-8629433585228698529
 Rigidbody2D:

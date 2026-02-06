@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fireball
   speed: 8
-  baseDamage: 5
+  baseDamage: 10
 --- !u!50 &-7781936324045416853
 Rigidbody2D:
   serializedVersion: 5

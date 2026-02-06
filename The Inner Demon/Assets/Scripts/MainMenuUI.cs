@@ -34,6 +34,6 @@ public class MainMenuUI : MonoBehaviour
 
     public void Ready2()
     {
-        SceneManager.LoadScene("BossFight");
+        SceneManager.LoadScene("SampleScene");
     }
 }

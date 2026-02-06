@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FreezeAttack
   speed: 8
-  baseDamage: 5
+  baseDamage: 10
   slowMultiplier: 0.5
   slowDuration: 3
 --- !u!58 &-4913489287439601191
