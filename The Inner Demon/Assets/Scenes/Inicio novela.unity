@@ -147,14 +147,14 @@ RectTransform:
   m_GameObject: {fileID: 512075650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.02, y: 1, z: 1}
+  m_LocalScale: {x: 1.149846, y: 1.1273, z: 1.1273}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1487782002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -750, y: -126}
+  m_AnchoredPosition: {x: -750, y: -95}
   m_SizeDelta: {x: 329, y: 880}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &512075652
@@ -542,14 +542,14 @@ RectTransform:
   m_GameObject: {fileID: 857970193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.05, y: 1, z: 1}
+  m_LocalScale: {x: 1.1166931, y: 1.0635173, z: 1.0635173}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1487782002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 742, y: -191.23944}
+  m_AnchoredPosition: {x: 742, y: -125}
   m_SizeDelta: {x: 334, y: 811.4789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &857970195
@@ -1415,62 +1415,62 @@ MonoBehaviour:
     sprite: {fileID: -780357946405451759, guid: f847921402b23904d988f92ff4db959b, type: 3}
     lado: 0
   - texto: Yeah.
-    sprite: {fileID: 0}
+    sprite: {fileID: -5481308018000576546, guid: a86c77dba6f7c914289fa8fb25536ca0, type: 3}
     lado: 1
   - texto: Well.., we have to go to the cementery were she is burried, do some necromagic
       rituals and...
-    sprite: {fileID: 0}
+    sprite: {fileID: -2424449133612562781, guid: 9e2b6f9e4b9b08f40bd373ab6de1221d, type: 3}
     lado: 1
   - texto: No grave desecration, please.
-    sprite: {fileID: 0}
+    sprite: {fileID: -7799669898794606654, guid: f847921402b23904d988f92ff4db959b, type: 3}
     lado: 0
   - texto: Bagh lame...
-    sprite: {fileID: 0}
+    sprite: {fileID: -2424449133612562781, guid: 9e2b6f9e4b9b08f40bd373ab6de1221d, type: 3}
     lado: 1
   - texto: I just don't want a rotting corpse to act as my Sister.
-    sprite: {fileID: 0}
+    sprite: {fileID: -7799669898794606654, guid: f847921402b23904d988f92ff4db959b, type: 3}
     lado: 0
   - texto: Then do you prefer to go to the darkest pit of hell just to save your
       sister?
-    sprite: {fileID: 0}
+    sprite: {fileID: -5481308018000576546, guid: a86c77dba6f7c914289fa8fb25536ca0, type: 3}
     lado: 1
   - texto: ...
-    sprite: {fileID: 0}
+    sprite: {fileID: 262602053635242629, guid: 27a3312724b558545b65b9b8a90df60d, type: 3}
     lado: 0
   - texto: I'll take the shovel >:3.
-    sprite: {fileID: 0}
+    sprite: {fileID: -5481308018000576546, guid: a86c77dba6f7c914289fa8fb25536ca0, type: 3}
     lado: 1
   - texto: Wait... Sighn... Alright, I'll go to hell.
-    sprite: {fileID: 0}
+    sprite: {fileID: -1964014484289923949, guid: f847921402b23904d988f92ff4db959b, type: 3}
     lado: 0
   - texto: Seriously?
-    sprite: {fileID: 0}
-    lado: 0
+    sprite: {fileID: 4384325308882227781, guid: 9e2b6f9e4b9b08f40bd373ab6de1221d, type: 3}
+    lado: 1
   - texto: Well... I prefer to not  go to a cementery at this moment.
-    sprite: {fileID: 0}
+    sprite: {fileID: 2659330330607138310, guid: f847921402b23904d988f92ff4db959b, type: 3}
     lado: 0
   - texto: Just tell me... What's is the worst thing that can happend to me in that
       place?
-    sprite: {fileID: 0}
+    sprite: {fileID: -4862256256559979399, guid: 27a3312724b558545b65b9b8a90df60d, type: 3}
     lado: 0
   - texto: Uhhh... You might not come back.
-    sprite: {fileID: 0}
+    sprite: {fileID: -2424449133612562781, guid: 9e2b6f9e4b9b08f40bd373ab6de1221d, type: 3}
     lado: 1
   - texto: But hey, you will be with your sister, soooo... thats something...
-    sprite: {fileID: 0}
+    sprite: {fileID: -2226476613435789502, guid: 9e2b6f9e4b9b08f40bd373ab6de1221d, type: 3}
     lado: 1
   - texto: That's funny
-    sprite: {fileID: 0}
+    sprite: {fileID: 8670961617243131850, guid: f847921402b23904d988f92ff4db959b, type: 3}
     lado: 0
   - texto: Well just don't die and everything will be ok. I'll give some magic stuff
       just to keep away the reaper.
-    sprite: {fileID: 0}
+    sprite: {fileID: -2226476613435789502, guid: 9e2b6f9e4b9b08f40bd373ab6de1221d, type: 3}
     lado: 1
   - texto: Alright, Let's start the ritual.
-    sprite: {fileID: 0}
+    sprite: {fileID: 3458544157592570189, guid: e76fa039d3e645544a3627eb8efc8f94, type: 3}
     lado: 0
   - texto: (F*ck)
-    sprite: {fileID: 0}
+    sprite: {fileID: 5392685236264183788, guid: e76fa039d3e645544a3627eb8efc8f94, type: 3}
     lado: 0
 --- !u!1 &1625748090
 GameObject:
