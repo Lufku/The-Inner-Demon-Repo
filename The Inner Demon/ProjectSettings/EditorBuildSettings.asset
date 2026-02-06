@@ -6,7 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/pantalla de inicio.unity
+    guid: 0a31cb46430dc3b4591ba2ead982b51c
+  - enabled: 1
+    path: Assets/Scenes/Inicio novela.unity
+    guid: db71a4c9a29facf48b6679e5f3611ac3
+  - enabled: 1
+    path: Assets/Scenes/PreLevel1.unity
+    guid: bde30fa471095a341832910841659882
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: b705d7207ca82a64a808c3aaa92da429
+  - enabled: 1
+    path: Assets/Scenes/BossFight.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
