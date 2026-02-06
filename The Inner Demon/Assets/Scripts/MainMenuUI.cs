@@ -8,7 +8,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Inicio novela");
     }
 
     public void ShowControls()
