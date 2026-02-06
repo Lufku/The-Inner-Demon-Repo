@@ -3,27 +3,36 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [Header("Stats")]
-    public int health = 50;
+    public int maxHealth = 50;
+    private int currentHealth;
+
+    [Header("Health Bar")]
+    public HealthBar healthBar;
 
     [Header("Boss Attack")]
-    public GameObject fireballPrefab;   // FireballDemon
-    public Transform handPoint;         // Mano del boss
-    public float fireInterval = 1f;     // Dispara cada 1 segundo
+    public GameObject fireballPrefab;
+    public Transform handPoint;
+    public float fireInterval = 1f;
     public float fireballSpeed = 6f;
 
     private float fireTimer = 0f;
 
     [Header("Movement Area")]
-    public Vector2 minBounds;   // esquina inferior izquierda
-    public Vector2 maxBounds;   // esquina superior derecha
-    public float moveSpeed = 3f;
-    public float waitTime = 2f; // tiempo entre cambios de destino
+    public Vector2 minBounds;
+    public Vector2 maxBounds;
+    public float moveSpeed = 4f;
+    public float waitTime = 0.6f;
 
     private Vector2 targetPos;
     private float moveTimer = 0f;
 
     void Start()
     {
+        currentHealth = maxHealth;
+
+        if (healthBar != null)
+            healthBar.SetValue(currentHealth, maxHealth);
+
         PickNewTargetPosition();
     }
 
@@ -33,20 +42,13 @@ public class Enemy : MonoBehaviour
         HandleAttack();
     }
 
-    // -----------------------------
-    // MOVIMIENTO ALEATORIO
-    // -----------------------------
     void HandleMovement()
     {
         moveTimer += Time.deltaTime;
 
-        // Cambia de destino cada cierto tiempo, aunque no haya llegado
         if (moveTimer >= waitTime)
-        {
             PickNewTargetPosition();
-        }
 
-        // Movimiento continuo hacia el objetivo
         transform.position = Vector2.MoveTowards(
             transform.position,
             targetPos,
@@ -64,12 +66,6 @@ public class Enemy : MonoBehaviour
         targetPos = new Vector2(x, y);
     }
 
-
-
-
-    // -----------------------------
-    // ATAQUE
-    // -----------------------------
     void HandleAttack()
     {
         fireTimer += Time.deltaTime;
@@ -100,13 +96,14 @@ public class Enemy : MonoBehaviour
         return player.transform.position;
     }
 
-    // -----------------------------
-    // DAÑO Y MUERTE
-    // -----------------------------
     public void TakeDamage(int amount)
     {
-        health -= amount;
-        if (health <= 0)
+        currentHealth -= amount;
+
+        if (healthBar != null)
+            healthBar.SetValue(currentHealth, maxHealth);
+
+        if (currentHealth <= 0)
             Die();
     }
 

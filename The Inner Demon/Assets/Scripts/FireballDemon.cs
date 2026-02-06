@@ -19,21 +19,7 @@ public class FireballDemon : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Wall w = col.GetComponent<Wall>();
-        if (w)
-        {
-            w.TakeDamage(damage);
-            Destroy(gameObject);
-            return;
-        }
 
-        Enemy e = col.GetComponent<Enemy>();
-        if (e)
-        {
-            e.TakeDamage(damage);
-            Destroy(gameObject);
-            return;
-        }
 
         PlayerStats p = col.GetComponent<PlayerStats>();
         if (p)
