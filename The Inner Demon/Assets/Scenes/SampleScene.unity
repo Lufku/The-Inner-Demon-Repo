@@ -2744,6 +2744,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2060410480816667574, guid: 61540821d491c564dbf25d773af01e04, type: 3}
+      propertyPath: bombCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060410480816667574, guid: 61540821d491c564dbf25d773af01e04, type: 3}
+      propertyPath: laserCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060410480816667574, guid: 61540821d491c564dbf25d773af01e04, type: 3}
+      propertyPath: freezeCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060410480816667574, guid: 61540821d491c564dbf25d773af01e04, type: 3}
+      propertyPath: fireballCooldown
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5198505970225973182, guid: 61540821d491c564dbf25d773af01e04, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.36
